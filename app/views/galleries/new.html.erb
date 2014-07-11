@@ -1,0 +1,32 @@
+<h1>New Gallery</h1>
+
+<%##form action="/galleries" method="POST">
+	<%#div>
+		<input>Name Gallery</input>
+	</div>
+	
+	<div>
+		<input>Describe Gallery</input>
+	</div>
+	<input type ='submit' value ="Create Gallery">
+</form>
+
+%%>
+
+<%= form_for(@gallery) do |form| %>
+<div>
+	<%= form.label :name %>
+	<%= form.text_field :name %>
+</div>
+<div>
+	<%= form.label :description %>
+	<%= form.text_area :description %>
+</div>
+<%= form.submit "Create" %>
+<% end %>
+
+
+
+
+
+ 
